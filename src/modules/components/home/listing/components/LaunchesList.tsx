@@ -43,7 +43,7 @@ const LaunchesList: FC<LaunchesListProps> = ({ launches, query }) => {
     <div>
       <div
         ref={launchesRef}
-        className="h-[650px] border border-white/10 overflow-y-auto p-4 bg-slate-900/30 rounded-3xl"
+        className="h-[750px] border border-white/10 overflow-y-auto p-4 bg-slate-900/30 rounded-3xl"
       >
         {isInitialLoading && <Skeleton />}
         {isEmpty && <p>No launches match the current filters.</p>}
@@ -88,7 +88,7 @@ const LaunchesList: FC<LaunchesListProps> = ({ launches, query }) => {
               onClick={() => query.fetchNextPage()}
               disabled={query.isFetchingNextPage}
             >
-              {query.isFetchingNextPage ? 'Loading more…' : 'Load more home'}
+              {query.isFetchingNextPage ? 'Loading more…' : 'Load more launches'}
             </Button>
           ) : (
             <span className="badge">No more results to show</span>

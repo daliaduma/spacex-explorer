@@ -116,6 +116,7 @@ The launch response provides the `rocket` and `launchpad` IDs needed for the rel
 - Add tests (unit + integration + accessibility checks)
 - Improve image gallery with modal/lightbox and keyboard traps
 - Add offline caching / service worker support
+- Add animations
 
 ## Known limitations / TODOs
 
@@ -124,3 +125,4 @@ The launch response provides the `rocket` and `launchpad` IDs needed for the rel
 - No service worker / offline support yet
 - No SSR hydration strategy for preloaded first page yet
 - No automated tests included in this mini version
+- No animations
