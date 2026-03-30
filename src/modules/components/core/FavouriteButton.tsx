@@ -1,16 +1,20 @@
 ﻿import Button from '@/modules/components/ui/Button'
-import { useFavorites } from '@/modules/components/favourites/hooks/useFavourites'
 import { FC, useMemo } from 'react'
 import { FavoriteLaunch } from '@/modules/components/favourites/types'
+import { useFavoritesStore } from '@/modules/components/favourites/stores/useFavouritesStore'
 
 type FavouriteButtonProps = {
   launch: FavoriteLaunch
 }
 
 const FavouriteButton: FC<FavouriteButtonProps> = ({ launch }) => {
-  const { favoriteIds, isHydrated, toggleFavorite } = useFavorites()
+  const { favorites, toggleFavorite } = useFavoritesStore()
 
-  const isFavorite = favoriteIds.has(launch.id)
+  const isHydrated = typeof window !== 'undefined'
+
+  const isFavorite = useMemo(() => {
+    return favorites.find(itm => itm.id === launch.id)
+  }, [launch, favorites])
 
   const favoritePayload = useMemo(
     () => ({

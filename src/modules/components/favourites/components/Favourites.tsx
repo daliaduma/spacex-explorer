@@ -1,12 +1,13 @@
 ﻿'use client'
-import { useFavorites } from '@/modules/components/favourites/hooks/useFavourites'
 import FavouriteCard from '@/modules/components/favourites/components/FavouriteCard'
 import NoFavourites from '@/modules/components/favourites/components/NoFavourites'
 import Skeleton from '@/modules/components/ui/Skeleton'
 import Link from 'next/link'
+import { useFavoritesStore } from '@/modules/components/favourites/stores/useFavouritesStore'
 
 const Favorites = () => {
-  const { favorites, isHydrated, removeFavorite } = useFavorites()
+  const { favorites, removeFavorite } = useFavoritesStore()
+  const isHydrated = typeof window !== 'undefined'
 
   if (!isHydrated) {
     return <Skeleton />
