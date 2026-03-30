@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 import Button from '@/modules/components/ui/Button'
 import { useRouter } from 'next/navigation'
 import { FC } from 'react'
@@ -8,19 +8,27 @@ type ErrorProps = {
   unstable_retry: () => void
 }
 
-const ErrorPage: FC<ErrorProps> = () => {
+const ErrorPage: FC<ErrorProps> = ({ error, unstable_retry }) => {
   const router = useRouter()
 
   const handleGoHome = () => router.push('/')
+
+  const retry = () => unstable_retry()
 
   return (
     <main className="grid px-6 py-24 sm:py-32 lg:px-8">
       <div className="text-center">
         <h2 className="mt-4 font-semibold tracking-tight text-balance text-white sm:text-4xl">
-          Page not found
+          Something went wrong
         </h2>
+        <p className="mt-6 font-medium text-pretty text-gray-400">
+          We could not load this launch.
+        </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
-          <Button onClick={handleGoHome}>Go back home</Button>
+          <Button onClick={retry}>Try again</Button>
+          <Button variant="secondary" onClick={handleGoHome}>
+            Go back home
+          </Button>
         </div>
       </div>
     </main>

@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes, FC } from 'react'
-import { cn } from '@/lib/utils/cn'
+import { cn } from '@/lib/utils'
 
 type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger'
 type ButtonSize = 'sm' | 'md' | 'lg'
@@ -33,7 +33,8 @@ const Button: FC<ButtonProps> = ({
       className={cn(
         'cursor-pointer font-semibold rounded-full border border-white/10 text-sm transition',
         variantClasses[variant],
-        sizeClasses[size]
+        sizeClasses[size],
+        className
       )}
       {...props}
     />

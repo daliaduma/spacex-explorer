@@ -1,9 +1,13 @@
-import Hero from '@/modules/home/components/Hero'
+import Hero from '@/modules/components/home/hero/Hero'
+import Launches from '@/modules/components/home/listing/Launches'
 
-export default function Home() {
+const Home = async () => {
   return (
     <section>
       <Hero />
+      <Launches />
     </section>
   )
 }
+
+export default Home

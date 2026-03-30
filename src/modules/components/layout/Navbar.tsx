@@ -1,16 +1,15 @@
 import { FC } from 'react'
-import NavLink from '@/modules/layout/components/NavLink'
+import NavLink from '@/modules/components/layout/NavLink'
 import Link from 'next/link'
 
 const navLinks = [
   { key: 'home', to: '/', label: 'Home' },
-  { key: 'launches', to: '/launches', label: 'Launches' },
   { key: 'favourites', to: '/favourites', label: 'Favourites' }
 ]
 
 const Navbar: FC = () => {
   return (
-    <header className="sticky border-b border-white/2 top-0 z-20 bg-slate-900/80 backdrop-blur py-4">
+    <header className="sticky border-b border-white/2 top-0 bg-slate-900/80 backdrop-blur py-4 px-6 xl:px-0">
       <div className="mx-auto container flex items-center justify-between">
         <div>
           <Link
