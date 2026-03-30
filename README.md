@@ -92,7 +92,7 @@ The launch response provides the `rocket` and `launchpad` IDs needed for the rel
 
 - **Server-side pagination** to avoid fetching all launches
 - **Virtualized list rendering** for large result sets
-- **Debounced search/filter updates** to reduce unnecessary network calls
+- **Apply filters on form submission and not on input typing (previous solution was using debounce after search input changed its value, the other filters didn't need dedounbe)** to reduce unnecessary network calls
 - **React Query stale time + cache time** to reuse data across navigation
 - **Memoized flattened launch pages** before rendering
 - Basic **retry/backoff** for `429` and `5xx` API responses
