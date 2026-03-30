@@ -4,7 +4,7 @@ A mini frontend app built with **Next.js + TypeScript** against the public **Spa
 
 ## How to run
 
-Create a .env file in the root of the project with
+Create a .env file in the root of the project with or copy the .env.example content in your file
 
 ```
 NEXT_PUBLIC_API_BASE_URL=https://api.spacexdata.com/v4
