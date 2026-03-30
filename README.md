@@ -4,9 +4,16 @@ A mini frontend app built with **Next.js + TypeScript** against the public **Spa
 
 ## How to run
 
+Create a .env file in the root of the project with
+
+```
+NEXT_PUBLIC_API_BASE_URL=https://api.spacexdata.com/v4
+```
+
+
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 Then open `http://localhost:3000`.
