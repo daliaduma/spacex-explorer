@@ -20,7 +20,7 @@ const FavouriteCard: FC<FavouriteCardProps> = ({ launch, removeFavorite }) => {
     >
       <StatusBadge success={launch.success} upcoming={launch.upcoming} />
       <div>
-        <h2 className="text-3xl mt-3">{launch.name}</h2>
+        <h2 className="text-xl md:text-3xl mt-3">{launch.name}</h2>
         <p className="mt-3 text-sm">{formatDate(launch.date_utc)}</p>
       </div>
       <p className="my-8">

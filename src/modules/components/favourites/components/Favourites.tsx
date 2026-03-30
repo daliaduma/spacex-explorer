@@ -17,7 +17,7 @@ const Favorites = () => {
       <p className="mb-8">
         <Link href="/">⬅ Back to launches</Link>
       </p>
-      <h1 className="text-4xl mb-8">Favourites</h1>
+      <h1 className="text-2xl md:text-5xl mb-8">Favourites</h1>
       {favorites.length === 0 && <NoFavourites />}
       <div className="grid gap-6">
         {favorites.map(launch => (

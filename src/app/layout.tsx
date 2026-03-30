@@ -32,7 +32,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => (
           <div className="-z-10 absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,211,238,0.18),transparent_28%),radial-gradient(circle_at_left,rgba(59,130,246,0.12),transparent_24%)]" />
 
           <Navbar />
-          <div className="container mx-auto px-6 xl:px-0">{children}</div>
+          <div className="container mx-auto px-4 md:px-6 3xl:px-0">{children}</div>
         </main>
         <Footer />
       </QueryProvider>

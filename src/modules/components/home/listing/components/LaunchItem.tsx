@@ -14,7 +14,7 @@ const LaunchItem: FC<LaunchesListProps> = ({ launch }) => {
     <article className="group rounded-3xl border border-white/10 bg-slate-900/70 p-5 transition hover:border-cyan-400 hover:bg-slate-900">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <h2 className="text-lg font-semibold text-white">{launch.name}</h2>
+          <h2 className="text-base sm:text-lg font-semibold text-white">{launch.name}</h2>
           <p className="mt-1 text-sm text-slate-400">{formatDate(launch.date_utc)}</p>
         </div>
         <StatusBadge success={launch.success} upcoming={launch.upcoming} />

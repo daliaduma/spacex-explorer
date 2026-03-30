@@ -7,7 +7,7 @@ const CtaButtons = () => {
   const hanfleViewFavorites = () => router.push('/favourites')
 
   return (
-    <div className="mt-6 flex flex-wrap gap-3">
+    <div className="mt-6 flex sm:flex-wrap gap-3 text-center flex-col md:flex-row">
       <Button variant="primary">Explore launches</Button>
       <Button variant="secondary" onClick={hanfleViewFavorites}>
         View favorites
