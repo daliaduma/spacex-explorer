@@ -1,13 +1,17 @@
 ﻿import { FC } from 'react'
-import { getLaunchById, getLaunchpadById, getRocketById } from '@/modules/apis/launch'
+import {
+  getLaunchById,
+  getLaunchpadById,
+  getRocketById
+} from '@/modules/components/launch/apis/launch'
 import { formatDate } from '@/lib/utils'
 import Link from 'next/link'
-import StatusBadge from '@/modules/components/home/listing/StatusBadge'
-import Gallery from '@/modules/components/launch/Gallery'
+import StatusBadge from '@/modules/components/home/listing/components/StatusBadge'
+import Gallery from '@/modules/components/launch/components/Gallery'
 import Badge from '@/modules/components/ui/Badge'
-import PopularLinks from '@/modules/components/launch/PopularLinks'
-import Rocket from '@/modules/components/launch/Rocket'
-import Launchpad from '@/modules/components/launch/Launchpad'
+import PopularLinks from '@/modules/components/launch/components/PopularLinks'
+import Rocket from '@/modules/components/launch/components/Rocket'
+import Launchpad from '@/modules/components/launch/components/Launchpad'
 
 type LaunchViewProps = {
   id: string

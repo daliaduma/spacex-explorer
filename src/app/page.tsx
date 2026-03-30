@@ -1,5 +1,5 @@
 import Hero from '@/modules/components/home/hero/Hero'
-import Launches from '@/modules/components/home/listing/Launches'
+import Launches from '@/modules/components/home/listing/components/Launches'
 
 const Home = async () => {
   return (

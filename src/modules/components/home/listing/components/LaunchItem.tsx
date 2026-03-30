@@ -2,7 +2,7 @@
 import { Launch } from '@/modules/types'
 import { formatDate } from '@/lib/utils'
 import Link from 'next/link'
-import StatusBadge from '@/modules/components/home/listing/StatusBadge'
+import StatusBadge from '@/modules/components/home/listing/components/StatusBadge'
 import FavouriteButton from '@/modules/components/core/FavouriteButton'
 
 type LaunchesListProps = {

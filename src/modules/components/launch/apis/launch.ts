@@ -1,6 +1,6 @@
 ﻿import { API_BASE_URL } from '@/modules/constants'
 import { Launch, Launchpad, Rocket } from '@/modules/types'
-import { fetchWithRetry } from '@/modules/apis/launches'
+import { fetchWithRetry } from '@/modules/components/home/listing/apis/launches'
 
 export const getLaunchById = (id: string): Promise<Launch> => {
   return fetchWithRetry<Launch>(`${API_BASE_URL}/launches/${id}`)

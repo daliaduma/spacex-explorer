@@ -23,7 +23,7 @@ const Select: FC<SelectProps> = ({
   const id = props.id ?? props.name
 
   return (
-    <div className="relative mt-3 w-full">
+    <div className="relative mt-3">
       <label htmlFor={id} className="text-xs uppercase tracking-[0.2em] text-slate-500">
         {label}
       </label>

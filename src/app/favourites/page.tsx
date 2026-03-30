@@ -1,4 +1,4 @@
-﻿import Favorites from '@/modules/components/favourites/Favourites'
+﻿import Favorites from '@/modules/components/favourites/components/Favourites'
 
 const FavoritesView = () => {
   return <Favorites />

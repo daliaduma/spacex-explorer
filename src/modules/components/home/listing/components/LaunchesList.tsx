@@ -1,9 +1,10 @@
-﻿import LaunchItem from '@/modules/components/home/listing/LaunchItem'
-import { Launch, UseLaunchesQuery } from '@/modules/types'
+﻿import LaunchItem from '@/modules/components/home/listing/components/LaunchItem'
+import { Launch } from '@/modules/types'
 import { FC, useMemo, useRef } from 'react'
 import { useVirtualizer } from '@tanstack/react-virtual'
 import Button from '@/modules/components/ui/Button'
 import Skeleton from '@/modules/components/ui/Skeleton'
+import { UseLaunchesQuery } from '@/modules/components/home/listing/types'
 
 type LaunchesListProps = {
   launches: Launch[]

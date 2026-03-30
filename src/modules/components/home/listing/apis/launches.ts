@@ -1,5 +1,8 @@
-﻿import { LaunchesPage, LaunchQueryFilters } from '@/modules/types'
-import { API_BASE_URL, RETRYABLE_STATUS } from '@/modules/constants'
+﻿import { API_BASE_URL, RETRYABLE_STATUS } from '@/modules/constants'
+import {
+  LaunchesResponse,
+  LaunchQueryFilters
+} from '@/modules/components/home/listing/types'
 
 const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 
@@ -106,8 +109,8 @@ export const fetchLaunches = async ({
   pageParam?: number
   filters: LaunchQueryFilters
   limit?: number
-}): Promise<LaunchesPage> => {
-  return fetchWithRetry<LaunchesPage>(`${API_BASE_URL}/launches/query`, {
+}): Promise<LaunchesResponse> => {
+  return fetchWithRetry<LaunchesResponse>(`${API_BASE_URL}/launches/query`, {
     method: 'POST',
     body: JSON.stringify({
       query: getQuery(filters),

@@ -12,10 +12,7 @@ const Navbar: FC = () => {
     <header className="sticky border-b border-white/2 top-0 bg-slate-900/80 backdrop-blur py-4 px-6 xl:px-0">
       <div className="mx-auto container flex items-center justify-between">
         <div>
-          <Link
-            href="/public"
-            className="text-md uppercase tracking-[0.3em] text-primary"
-          >
+          <Link href="/" className="text-md uppercase tracking-[0.3em] text-primary">
             SpaceX Explorer
           </Link>
         </div>

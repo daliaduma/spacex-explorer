@@ -1,4 +1,4 @@
-import LaunchView from '@/modules/components/launch/LaunchView'
+import LaunchView from '@/modules/components/launch/components/LaunchView'
 import { FC } from 'react'
 
 type LaunchDetailPageProps = {

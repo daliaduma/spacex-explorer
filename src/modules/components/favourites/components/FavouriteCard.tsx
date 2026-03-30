@@ -1,9 +1,9 @@
-﻿import StatusBadge from '@/modules/components/home/listing/StatusBadge'
+﻿import StatusBadge from '@/modules/components/home/listing/components/StatusBadge'
 import { formatDate } from '@/lib/utils'
 import Link from 'next/link'
 import { FC } from 'react'
-import { FavoriteLaunch } from '@/modules/types'
 import Button from '@/modules/components/ui/Button'
+import { FavoriteLaunch } from '@/modules/components/favourites/types'
 
 type FavouriteCardProps = {
   launch: FavoriteLaunch

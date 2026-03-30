@@ -37,7 +37,8 @@ I chose **Next.js App Router** because it gives a cleaner route structure for:
 - future SSR/streaming enhancements
 - a good separation between server entry points and client components
 
-For this task, the list and detail experiences are mostly client-driven because filters, pagination, favorites, and virtualization are highly interactive.
+For this task, the list and detail experiences are mostly client-driven because filters, pagination, favorites, and
+virtualization are highly interactive.
 
 ### Why React Query
 
@@ -100,17 +101,18 @@ The launch response provides the `rocket` and `launchpad` IDs needed for the rel
 
 ## Tradeoffs
 
-- I used **Load more** instead of infinite scroll because it is easier to control, more predictable, and usually more accessible.
+- I used **Load more** instead of infinite scroll because it is easier to control, more predictable, and usually more
+  accessible.
 - The list page is client-rendered because the filters, virtualization, and infinite query behavior are state-heavy.
 - Favorites are stored only in LocalStorage, so they are device-specific.
-- I kept styling in plain global CSS for speed and clarity. In a production project, I might switch to CSS Modules or Tailwind depending on the team standard.
+- I kept styling in plain global CSS for speed and clarity. In a production project, I might switch to CSS Modules or
+  Tailwind depending on the team standard.
 
 ## What I would do next with more time
 
 - Add charts for launches per year / success rate
 - Add side-by-side comparison between launches with a shareable URL
 - Add URL-synced filters so searches can be shared/bookmarked
-- Add optimistic UI for favorites across tabs
 - Add tests (unit + integration + accessibility checks)
 - Improve image gallery with modal/lightbox and keyboard traps
 - Add offline caching / service worker support
@@ -118,6 +120,7 @@ The launch response provides the `rocket` and `launchpad` IDs needed for the rel
 ## Known limitations / TODOs
 
 - No chart bonus yet
+- No translation strings
 - No service worker / offline support yet
 - No SSR hydration strategy for preloaded first page yet
 - No automated tests included in this mini version

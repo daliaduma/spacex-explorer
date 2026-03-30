@@ -1,7 +1,7 @@
 ﻿'use client'
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { FavoriteLaunch } from '@/modules/types'
+import { FavoriteLaunch } from '@/modules/components/favourites/types'
 
 const STORAGE_KEY = 'spacex-explorer-favorites'
 

@@ -1,14 +1,4 @@
-﻿import { InfiniteData, UseInfiniteQueryResult } from '@tanstack/react-query'
-
-export type LaunchQueryFilters = {
-  search: string
-  timing: 'all' | 'upcoming' | 'past'
-  outcome: 'all' | 'success' | 'failure'
-  sort: 'date-desc' | 'date-asc' | 'name-asc' | 'name-desc'
-  dateFrom: string
-  dateTo: string
-}
-export type Launch = {
+﻿export type Launch = {
   id: string
   name: string
   date_utc: string
@@ -31,30 +21,6 @@ export type Launch = {
   }
   rocket: string
   launchpad: string
-}
-
-export type LaunchesPage = {
-  docs: Launch[]
-  nextPage: number | null
-  totalDocs: number
-}
-
-export type FetchNextPage = UseInfiniteQueryResult<
-  InfiniteData<LaunchesPage>,
-  Error
->['fetchNextPage']
-
-export type UseLaunchesQuery = {
-  isLoading: boolean
-  isFetchingNextPage: boolean
-  hasNextPage: boolean
-  isError: boolean
-  fetchNextPage: FetchNextPage
-}
-
-export type UseLaunchesReturn = {
-  launches: Launch[]
-  launchesQuery: UseLaunchesQuery
 }
 
 export type Rocket = {
@@ -80,8 +46,3 @@ export type Launchpad = {
   launches: string[]
   status: string
 }
-
-export type FavoriteLaunch = Pick<
-  Launch,
-  'id' | 'name' | 'date_utc' | 'success' | 'upcoming' | 'details'
->

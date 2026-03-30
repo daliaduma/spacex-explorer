@@ -1,7 +1,7 @@
 ﻿import Button from '@/modules/components/ui/Button'
-import { useFavorites } from '@/modules/hooks/useFavourites'
+import { useFavorites } from '@/modules/components/favourites/hooks/useFavourites'
 import { FC, useMemo } from 'react'
-import { FavoriteLaunch } from '@/modules/types'
+import { FavoriteLaunch } from '@/modules/components/favourites/types'
 
 type FavouriteButtonProps = {
   launch: FavoriteLaunch
@@ -27,7 +27,7 @@ const FavouriteButton: FC<FavouriteButtonProps> = ({ launch }) => {
   const handleToggleFavourite = () => toggleFavorite(favoritePayload)
 
   if (!isHydrated) return null
-  
+
   return (
     <Button variant="secondary" onClick={handleToggleFavourite}>
       {isFavorite ? 'Remove favourite' : 'Add to Favourites'}
